@@ -23,12 +23,15 @@
   max-width: 1000px;
   margin: auto;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 #heading {
   display: flex;
-  justify-content: center;
   justify-content: space-around;
+  color: green;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .selectTimes {
@@ -37,15 +40,32 @@
   align-items: center;
 }
 
+.breath_spacing {
+  padding-right: 10px;
+}
+
+.seconds_spacing {
+  padding-left: 10px;
+}
+
 #breathTimer {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .breath {
     display: flex;
     margin: 8px;
+}
+
+#myBtn {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  margin: 20px;
+  color: white;
+  padding: 8px;
 }
 
 #canvas1 {
@@ -55,4 +75,46 @@
   transform: translate(-50%, -50%);
   width: 300px;
   height: 378px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.modal_paragraph {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

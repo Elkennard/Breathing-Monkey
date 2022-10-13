@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,55 +9,80 @@
   </head>
 
   <body class="wrapper">
-    <h1 id="heading">Breath with me ...</h1>
+    <h1 id="heading">Breathe with me ...</h1>
     <div class="selectTimes">
       <div class="breath">
-      <h3>Breath In (sec)</h3>
-      <select id="breathIn">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5" selected="selected">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-      </select>
-</div>
-<div class="breath">
-      <h3>Hold Breath (sec)</h3>
-      <select id="holdBreath">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4" selected="selected">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-      </select>
-</div>
-<div class="breath">
-      <h3>Breath Out (sec)</h3>
-      <select id="breathOut">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8" selected="selected">8</option>
-        <option value="9">9</option>
-      </select>
+        <h3 class="breath_spacing">Breathe In for</h3>
+        <select id="breathIn">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5" selected="selected">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <h3 class="seconds_spacing">seconds</h3>
+      </div>
+      <div class="breath">
+        <h3 class="breath_spacing">Hold Breath for</h3>
+        <select id="holdBreath">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected="selected">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+        <h3 class="seconds_spacing">seconds</h3>
+      </div>
+      <div class="breath">
+        <h3 class="breath_spacing">Breathe Out for</h3>
+        <select id="breathOut">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8" selected="selected">8</option>
+          <option value="9">9</option>
+        </select>
+        <h3 class="seconds_spacing">seconds</h3>
+      </div>
+
+      <button id="myBtn">Top Tip</button>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Papworth Method</h3>
+        <p class="modal_paragraph">
+          Possibly helpful for asthmatics: Inhale slowly through the nose (2
+          seconds) and take twice as long to exhale through pursed lips (4
+          seconds). No hold is required for this technique, so set the timer to
+          zero. <a class="modal_paragraph" href="https://asthma.net/living/lung-exercises" target="_blank">Further reading</a></p>
+          <br>
+          <h3>Box Breathing</h3>
+          <p class="modal_paragraph">Helpful for anxiety: Breathe in through your nose counting to 4 slowly. Hold your breath for 4 seconds. Slowly exhale through your mouth for 4 seconds. Repeat until you feel calm and re-centered. <a class="modal_paragraph" href="https://www.webmd.com/balance/what-is-box-breathing#091e9c5e821620fa-1-3" target="_blank">Further reading</a></p>
+        </p>
+        <br>
+          <h3>4-7-8 Breath Method</h3>
+          <p class="modal_paragraph">Great for avoiding panic attacks: Breathe in through your nose to the count of 4. Hold the breath to the count of 7. Exhale through your mouth to the count of 8. You may want to try slightly different timings, 5-4-8 is a popular alternative. <a class="modal_paragraph" href="https://www.gundersenhealth.org/health-wellness/live-happy/4-7-8-breathing-technique" target="_blank">Further reading</a></p>
+        </p>
       </div>
     </div>
-    <button id="topTip">Top Tip</button>
+
     <h1 id="breathTimer"></h1>
 
     <canvas id="canvas1"></canvas>
