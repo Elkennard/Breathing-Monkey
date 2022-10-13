@@ -1,16 +1,16 @@
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
-const CANVAS_WIDTH = (canvas.width = 600);
-const CANVAS_HEIGHT = (canvas.height = 600);
+const CANVAS_WIDTH = (canvas.width = 100);
+const CANVAS_HEIGHT = (canvas.height = 126);
 
 const playerImage = new Image();
-playerImage.src = "Monkey.png";
+playerImage.src = "./Assets/Monkey.png";
 const spriteWidth = 100;
 const spriteHeight = 126;
 let frameX = 0;
 let frameY = 0;
-const scale = 2;
-let position = 0
+const scale = 1;
+let position = 0;
 
 const breath = [
   {
@@ -113,41 +113,47 @@ const breath = [
 
 numberOfFrames = 0;
 framesPerSecond = 0;
-
+let timerText = document.getElementById("breathTimer");
 
 function Animate() {
-  setTimeout(function() {
+  setTimeout(function () {
     requestAnimationFrame(Animate);
-  }, (1000/numberOfFrames) * framesPerSecond)
+  }, (1000 / numberOfFrames) * framesPerSecond);
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 
-      frameX = breath[position].frame.x;
-      frameY = breath[position].frame.y;
-ctx.drawImage(
-        playerImage,
-        frameX,
-        frameY,
-        spriteWidth,
-        spriteHeight,
-        0,
-        0,
-        spriteWidth * scale,
-        spriteHeight * scale
-      );
-      position++;
-if (position < 12) {
-  numberOfFrames = 12
-  framesPerSecond = 5
-} if (position >= 12 && position < 14) {
-  numberOfFrames = 2
-framesPerSecond = 4
-} if (position >= 14) {
-  numberOfFrames = 10
-  framesPerSecond = 8
-} if (position === 24) {
-  position = 0
+  frameX = breath[position].frame.x;
+  frameY = breath[position].frame.y;
+  ctx.drawImage(
+    playerImage,
+    frameX,
+    frameY,
+    spriteWidth,
+    spriteHeight,
+    0,
+    0,
+    spriteWidth * scale,
+    spriteHeight * scale
+  );
+  position++;
+  if (position <= 11) {
+    numberOfFrames = 4;
+    framesPerSecond = document.getElementById("breathIn").value;
+    timerText.innerHTML = "BREATH IN";
+  }
+  if (position >= 12 && position < 14) {
+    numberOfFrames = 1;
+    framesPerSecond = document.getElementById("holdBreath").value;
+    timerText.innerHTML = "HOLD";
+  }
+  if (position >= 15) {
+    numberOfFrames = 12;
+    framesPerSecond = document.getElementById("breathOut").value;
+    timerText.innerHTML = "BREATH OUT";
+  }
+  if (position === 24) {
+    position = 0;
+  }
 }
-}
-Animate()
+Animate();
 
 requestAnimationFrame(Animate);

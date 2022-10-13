@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Breathing Monkey</title>
   </head>
-  <body>
+
+  <body class="wrapper">
+    <h1 id="heading">Breath with me ...</h1>
+    <div class="selectTimes">
+      <div class="breath">
+      <h3>Breath In (sec)</h3>
+      <select id="breathIn">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected="selected">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+</div>
+<div class="breath">
+      <h3>Hold Breath (sec)</h3>
+      <select id="holdBreath">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" selected="selected">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+</div>
+<div class="breath">
+      <h3>Breath Out (sec)</h3>
+      <select id="breathOut">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8" selected="selected">8</option>
+        <option value="9">9</option>
+      </select>
+      </div>
+    </div>
+    <button id="topTip">Top Tip</button>
+    <h1 id="breathTimer"></h1>
+
     <canvas id="canvas1"></canvas>
     <script src="script.js"></script>
   </body>
